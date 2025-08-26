@@ -1,19 +1,18 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
-import type { Idea } from "@/types";
-import { fetchIdeas } from "@/api/ideas";
+import { createFileRoute } from "@tanstack/react-router";
 import { Lightbulb } from "lucide-react";
+import { fetchIdeas } from "@/api/ideas";
+import { queryOptions, useSuspenseQuery } from "@tanstack/react-query";
 import IdeaCard from "@/components/IdeaCard";
 
 const ideasQueryOptions = queryOptions({
-  queryKey: ["ideas", { limit: 3 }],
-  queryFn: () => fetchIdeas(3),
+  queryKey: ["ideas"],
+  queryFn: () => fetchIdeas(),
 });
 
 export const Route = createFileRoute("/")({
+  component: HomePage,
   loader: ({ context }) =>
     context.queryClient.ensureQueryData(ideasQueryOptions),
-  component: HomePage,
 });
 
 function HomePage() {
@@ -36,18 +35,18 @@ function HomePage() {
           Latest Ideas
         </h2>
         <div className="space-y-6">
-          {ideas.map((idea: Idea) => (
+          {ideas.map((idea) => (
             <IdeaCard key={idea.id} idea={idea} button={false} />
           ))}
         </div>
 
         <div className="mt-6">
-          <Link
-            to="/ideas"
+          <a
+            href="/ideas"
             className="w-full text-center inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2 rounded-md transition"
           >
             View All Ideas
-          </Link>
+          </a>
         </div>
       </section>
     </div>

@@ -1,16 +1,28 @@
 import api from "@/lib/axios";
 import type { Idea } from "@/types";
 
-//get all ideas
-export const fetchIdeas = async (limit?: number): Promise<Idea[]> => {
-  const response = await api.get("/ideas", {
-    params: limit ? { _limit: limit } : {},
-  });
+// Get all ideas
+export const fetchIdeas = async (): Promise<Idea[]> => {
+  const response = await api.get("/ideas");
   return response.data;
 };
 
-//get single idea
+// Get single idea
 export const fetchIdea = async (ideaId: string): Promise<Idea> => {
   const response = await api.get(`/ideas/${ideaId}`);
   return response.data;
+};
+
+export const createIdea = async (newIdea: {
+  title: string;
+  summary: string;
+  description: string;
+  tags: string[];
+}): Promise<Idea> => {
+  const res = await api.post("/ideas", {
+    ...newIdea,
+    createdAt: new Date().toISOString(),
+  });
+
+  return res.data;
 };
