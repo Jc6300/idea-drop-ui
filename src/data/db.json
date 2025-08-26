@@ -71,48 +71,6 @@
         "ai"
       ],
       "createdAt": "2025-04-24T13:10:00.000Z"
-    },
-    {
-      "id": "9b1a",
-      "title": "Human Mobility Manager",
-      "summary": "Voluptas reiciendis incidunt voluptas quis omnis.",
-      "description": "Sint quisquam exercitationem.",
-      "tags": [
-        "webt",
-        "webdev",
-        "programming"
-      ],
-      "createdAt": "2025-08-25T23:18:39.880Z"
-    },
-    {
-      "id": "35f6",
-      "title": "National Markets Developer",
-      "summary": "Ipsa neque officia ipsa nisi.",
-      "description": "Quibusdam quos quidem laudantium porro incidunt facere.",
-      "tags": [
-        "Sequi reprehenderit dolore voluptatibus excepturi earum."
-      ],
-      "createdAt": "2025-08-25T23:22:28.354Z"
-    },
-    {
-      "id": "a177",
-      "title": "Direct Implementation Architect",
-      "summary": "Aliquam eaque labore excepturi quae ex nostrum aperiam.",
-      "description": "Nisi voluptatum nulla saepe provident voluptatum inventore vitae eum deleniti.",
-      "tags": [
-        "Soluta adipisci qui aspernatur exercitationem quia tempora laboriosam sapiente nihil."
-      ],
-      "createdAt": "2025-08-25T23:28:11.664Z"
-    },
-    {
-      "id": "8d36",
-      "title": "Global Web Developer",
-      "summary": "Amet consectetur incidunt sit voluptatem perspiciatis dolor nemo.",
-      "description": "Odit nihil quaerat.",
-      "tags": [
-        "Voluptate ea ducimus itaque harum quaerat laboriosam."
-      ],
-      "createdAt": "2025-08-26T01:03:54.223Z"
     }
   ]
 }
